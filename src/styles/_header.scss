@@ -1,0 +1,26 @@
+@use "./variables";
+
+header {
+  position: relative;
+  width: 100%;
+
+  .container {
+    position: absolute;
+    // width: 100%;
+    top: 0px;
+    @include flex(row, space-between, center);
+    padding: 2% 10%;
+  }
+
+  .nav {
+    @include navBar;
+    li {
+      font-size: 1em;
+      display: inline;
+      border: 1px solid;
+      text-transform: capitalize;
+      padding: 0.5em;
+      margin: 0 0.5em;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+$highlight: #ff565b;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin navBar {
+  list-style-type: none;
+}
+
+@mixin full {
+    width: 100%;
+    height: 100%;
+}
