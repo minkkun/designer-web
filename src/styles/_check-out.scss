@@ -1,0 +1,32 @@
+.check-out {
+    
+    .container {
+        @include flex(row, center, center);
+        margin: 5%;
+    }
+    
+
+    .left {
+    
+        .description {
+            text-transform: none;
+            margin-bottom: 10%;
+        }
+       
+    }
+
+    .right {
+       @include flex(row, center, center);
+       img {
+        border-radius: 10px;
+       }
+    }
+}
+
+.discover-btn {
+    background-color: $highlight;
+    padding: 1em 2em;
+    border:none;
+    border-radius: 0.7em;
+    color: white;
+}

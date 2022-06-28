@@ -1,0 +1,64 @@
+.talk {
+  .container {
+    position: relative;
+    @include flex(row, center, center);
+    padding: 5% 0;
+
+    img {
+      position: absolute;
+      top: 0px;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .box {
+    background-color: white;
+    margin: 0 10%;
+    padding: 2% 5%;
+    border-radius: 1em;
+    width: 100%;
+    @include flex(row, spaced-between, center);
+    & > * {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    padding-bottom: 0.7em;
+  }
+  form > * {
+    @include flex(row, center, center);
+    gap: 10px;
+    margin: 2% 0;
+  }
+  form {
+    .row-3 {
+      textarea {
+        resize: both;
+        overflow: auto;
+        height: 5em;
+      }
+    }
+    input,
+    textarea {
+      border: 2px solid $fade-break;
+      padding: 2%;
+      border-radius: 0.7em;
+      width: 100%;
+      color: rgb(73, 72, 72);
+      &::placeholder {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .right {
+    @include flex(row, flex-end, center);
+
+    iframe {
+      height: 30rem;
+      width: 30rem;
+    }
+  }
+}

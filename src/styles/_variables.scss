@@ -1,4 +1,9 @@
 $highlight: #ff565b;
+$bold: 700;
+$round: 3%;
+$fade-text: rgb(122, 122, 122);
+$fade-break: rgb(235, 235, 235);
+$padding-small: 5% 10%;
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -12,6 +17,6 @@ $highlight: #ff565b;
 }
 
 @mixin full {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }

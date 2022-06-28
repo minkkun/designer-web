@@ -1,0 +1,110 @@
+@use "./variables";
+
+.small-gray-text {
+  font-size: 0.9rem;
+  color: $fade-text;
+}
+
+h1 {
+  padding-bottom: 2em;
+
+  .title-content {
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .pink-color {
+    @include flex(row, flex-start, center);
+    gap: 10px;
+    div {
+      color: $highlight;
+    }
+    span {
+      background-color: $highlight;
+    }
+    .long-dash {
+      display: block;
+      height: 0.2em;
+      width: 3em;
+    }
+    .normal-text {
+      background-color: inherit;
+      color: black;
+    }
+  }
+}
+
+#explore {
+  margin: 20% 5% 5%;
+}
+.section {
+  * {
+    color: black;
+    text-transform: capitalize;
+  }
+
+  .section-image {
+    border-radius: $round;
+  }
+
+  .container {
+    @include flex(row, space-between, flex-end);
+    gap: 5em;
+
+    .left {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+   
+
+    .right {
+      width: 50%;
+
+      .sub-content {
+        @include flex(column, spaced-between, flex-start);
+
+        i {
+          padding: 3%;
+          color: $fade-text;
+        }
+
+        .space {
+          margin: 2rem 0;
+        }
+
+        .row-1 {
+          width: 100%;
+          .break {
+            display: block;
+            width: 100%;
+            height: 0.2em;
+            background-color: $fade-break;
+          }
+          .sub-title {
+            font-weight: $bold;
+            font-size: 1.2em;
+            padding: 2% 0;
+          }
+        }
+
+        .row-2 {
+          @include flex(row, spaced-between, baseline);
+
+          .col-1 {
+            width: 40%;
+          }
+
+          .col-2 {
+            .project-name {
+              font-weight: $bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

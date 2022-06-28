@@ -6,10 +6,12 @@ header {
 
   .container {
     position: absolute;
-    // width: 100%;
+    // margin: auto;
+    padding: 1% 10%;
+    width: 100%;
+    box-sizing: border-box;
     top: 0px;
     @include flex(row, space-between, center);
-    padding: 2% 10%;
   }
 
   .nav {
@@ -17,10 +19,19 @@ header {
     li {
       font-size: 1em;
       display: inline;
-      border: 1px solid;
       text-transform: capitalize;
-      padding: 0.5em;
       margin: 0 0.5em;
+      a {
+        text-decoration: none;
+        padding: 0.9em 1em;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+      }
+      .active {
+        color: $highlight;
+        background-color: white;
+        border-top: 10px solid $highlight;
+      }
     }
   }
 }

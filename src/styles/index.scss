@@ -1,12 +1,22 @@
 @import "./variables";
 @import "./header";
 @import "./main";
+@import "./explore";
+@import "./search";
+@import "./check-out";
+@import "./talk";
+@import "./footer";
 
 * {
   margin: 0;
   font-family: poppins;
   color: white;
-  
 }
+
+body {
+  position: relative;
+}
+
+
 
 
