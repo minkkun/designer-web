@@ -1,0 +1,40 @@
+.company {
+  .description {
+    color: $fade-text;
+    margin: 5% 0;
+  }
+  #dd-top {
+    font-weight: $bold;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  .dropdown {
+    .dash {
+        display: inline-block;
+        height: 2px;
+        width: 100%;
+        background-color: $fade-break;
+        margin: 0 1em;
+      }
+      .dropdown-container {
+        color: $fade-text;
+        margin:  0 1em;;
+      }
+      .dropdown-btn {
+        @include flex(row, space-between, center);
+        width: 100%;
+        background-color: white;
+        border: none;
+        padding: 0 1em;
+        font-size: 1em;
+        i {
+          color: darkblue;
+        }
+      }
+  }
+  
+}
+
+.captitalize {
+  text-transform: capitalize;
+}

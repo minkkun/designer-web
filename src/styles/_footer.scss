@@ -1,6 +1,6 @@
 .footer {
   .container {
-    margin: 5%;
+    margin: $padding-small;
     @include flex(row, spaced-evenly, flex-start);
 
     .left {

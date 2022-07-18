@@ -1,6 +1,7 @@
 header {
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 header .container {
   position: absolute;
@@ -40,7 +41,6 @@ header .nav li .active {
 
 main {
   position: relative;
-  z-index: -1;
 }
 main .banner {
   height: -webkit-max-content;
@@ -55,8 +55,9 @@ main .banner .content {
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-top: 10em;
 }
 main .banner .content * {
   text-transform: uppercase;
@@ -66,6 +67,12 @@ main .banner .content button {
   text-transform: capitalize;
   color: #ff565b;
   background-color: white;
+}
+main .banner .content .description {
+  margin: 0 20%;
+  text-transform: capitalize;
+  font-weight: 400;
+  text-align: center;
 }
 main .banner .content #upper {
   letter-spacing: 0.2em;
@@ -105,18 +112,13 @@ h1 .pink-color div {
 h1 .pink-color span {
   background-color: #ff565b;
 }
-h1 .pink-color .long-dash {
-  display: block;
-  height: 0.2em;
-  width: 3em;
-}
 h1 .pink-color .normal-text {
   background-color: inherit;
   color: black;
 }
 
 #explore {
-  margin: 20% 5% 5%;
+  margin: 15% 5% 5%;
 }
 
 .section * {
@@ -182,10 +184,17 @@ h1 .pink-color .normal-text {
   font-weight: 700;
 }
 
+.long-dash {
+  display: block;
+  height: 0.2em;
+  width: 3em;
+}
+
 .search {
-  z-index: 100;
+  pointer-events: auto;
+  z-index: 1;
   position: absolute;
-  top: 35rem;
+  bottom: -10rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -193,7 +202,7 @@ h1 .pink-color .normal-text {
   align-items: center;
 }
 .search .container {
-  margin: 5% 10%;
+  margin: 0 10%;
   background: white;
   width: 100%;
   height: 100%;
@@ -366,7 +375,7 @@ h1 .pink-color .normal-text {
 }
 
 .footer .container {
-  margin: 5%;
+  margin: 5% 10%;
   display: flex;
   flex-direction: row;
   justify-content: spaced-evenly;
@@ -399,6 +408,331 @@ h1 .pink-color .normal-text {
 }
 .footer .container .right .row-1 ul i {
   margin-right: 0.3em;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: -5rem;
+}
+.menu .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+  gap: 5em;
+}
+.menu .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(56, 56, 56, 0.3215686275);
+  width: 12rem;
+}
+.menu .container div i {
+  color: #ff565b;
+  padding-bottom: 0.3em;
+}
+
+.company .description {
+  color: rgb(122, 122, 122);
+  margin: 5% 0;
+}
+.company #dd-top {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.company .dropdown .dash {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  margin: 0 1em;
+}
+.company .dropdown .dropdown-container {
+  color: rgb(122, 122, 122);
+  margin: 0 1em;
+}
+.company .dropdown .dropdown-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 0 1em;
+  font-size: 1em;
+}
+.company .dropdown .dropdown-btn i {
+  color: darkblue;
+}
+
+.captitalize {
+  text-transform: capitalize;
+}
+
+.comment {
+  position: relative;
+}
+.comment .lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.comment .lower img {
+  margin: 5%;
+  height: 30 rem;
+}
+.comment .upper {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5em;
+  margin: 0 5%;
+}
+.comment .upper .box {
+  position: relative;
+  width: 25%;
+  padding: 3em;
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 9px 10px 0px 1px rgb(255, 170, 170), -1px -1px 17px 1px rgba(99, 99, 99, 0.219);
+}
+.comment .upper .box .up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+.comment .upper .box .up .name {
+  font-weight: 700;
+}
+.comment .upper .box .up .position {
+  color: rgb(122, 122, 122);
+  font-size: 0.8em;
+}
+.comment .upper .box .up .stars i {
+  color: #ff565b;
+  font-size: 80%;
+}
+.comment .upper .box .down {
+  font-size: 0.9em;
+  color: rgb(122, 122, 122);
+}
+.comment .upper .box > i {
+  position: absolute;
+  top: -0.5em;
+  color: #ff565b;
+  font-size: 3em;
+}
+
+.end {
+  padding: 2% 10%;
+  background-color: rgb(42, 42, 42);
+}
+.end .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.end .container .main-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+.end .container button {
+  color: #ff565b;
+  padding: 1em 2em;
+  border-radius: 1em;
+  border: none;
+}
+
+.design .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+.design .container img {
+  border-radius: 1em;
+  width: 100%;
+}
+.design .container .image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.design .container .info-box {
+  position: absolute;
+  bottom: 2em;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2% 0;
+  margin: 0 2%;
+  box-sizing: border-box;
+  border-radius: 1em;
+}
+.design .container .info-box * {
+  text-transform: capitalize;
+}
+.design .container .info-box .small-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.design .container .info-box .small-box .big {
+  color: black;
+}
+.design .container .info-box .small-box .small {
+  color: rgb(122, 122, 122);
+}
+.design .container .description {
+  margin: 2% 0;
+}
+.design .container .par {
+  color: rgb(122, 122, 122);
+  margin: 1% 0;
+  font-size: 0.9em;
+}
+.design .container .showcase-pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2em;
+}
+.design .container .title {
+  color: black;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 700;
+  align-self: flex-start;
+  margin: 2% 0 0;
+}
+.design span {
+  display: block;
+  background-color: rgb(235, 235, 235);
+  height: 0.05em;
+  width: 100%;
+  margin: 2% 0;
+}
+.design .other {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2% 0;
+}
+.design .other .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.design .other .box * {
+  color: black;
+  text-transform: capitalize;
+}
+.design .other .box .content {
+  flex-shrink: 0;
+}
+.design .other .box .content .big {
+  font-weight: 700;
+  margin: 2% 0;
+}
+.design .other .box .content .small {
+  color: rgb(122, 122, 122);
+  font-size: 0.9em;
+}
+.design .other #box-2 .small {
+  text-align: right;
+}
+
+.gallery {
+  margin: 5%;
+}
+.gallery .parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.5em;
+  width: 100%;
+}
+.gallery .parent * {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+}
+.gallery .div1 {
+  grid-area: 1/1/3/2;
+}
+.gallery .div2 {
+  grid-area: 1/2/2/3;
+}
+.gallery .div3 {
+  grid-area: 2/2/3/3;
+}
+.gallery .div4 {
+  grid-area: 1/3/3/4;
+}
+.gallery .div5 {
+  grid-area: 1/4/2/5;
+}
+.gallery .div6 {
+  grid-area: 2/4/3/5;
+}
+.gallery .div7 {
+  grid-area: 3/1/4/2;
+}
+.gallery .div8 {
+  grid-area: 4/1/5/2;
+}
+.gallery .div9 {
+  grid-area: 3/2/5/3;
+}
+.gallery .div10 {
+  grid-area: 3/3/4/4;
+}
+.gallery .div11 {
+  grid-area: 4/3/5/4;
+}
+.gallery .div12 {
+  grid-area: 3/4/5/5;
 }
 
 * {

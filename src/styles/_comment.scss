@@ -1,0 +1,55 @@
+.comment {
+  position: relative;
+
+  .lower {
+    @include flex(row, flex-end, center);
+    img {
+      margin: 5%;
+      height: 30 rem;
+    }
+  }
+  .upper {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    @include flex(row, flex-start, center);
+    gap: 5em;
+    margin: 0 5%;
+    .box {
+      position: relative;
+      width: 25%;
+      padding: 3em;
+      background-color: white;
+      border-radius: 1em;
+      box-shadow: 9px 10px 0px 1px rgb(255, 170, 170),
+        -1px -1px 17px 1px rgba(99, 99, 99, 0.219);
+
+      .up {
+        @include flex(column, center, flex-start);
+        gap: 0.5em;
+        margin-bottom: 1em;
+        .name {
+          font-weight: $bold;
+        }
+        .position {
+          color: $fade-text;
+          font-size: 0.8em;
+        }
+        .stars i {
+          color: $highlight;
+          font-size: 80%;
+        }
+      }
+      .down {
+        font-size: 0.9em;
+        color: $fade-text;
+      }
+      & > i {
+        position: absolute;
+        top: -0.5em;
+        color: $highlight;
+        font-size: 3em;
+      }
+    }
+  }
+}

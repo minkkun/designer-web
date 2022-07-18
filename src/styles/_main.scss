@@ -4,9 +4,8 @@
   color: $highlight;
 }
 
-main {
+@mixin main {
   position: relative;
-  z-index: -1;
   .banner {
     height: max-content;
     .content {
@@ -15,7 +14,8 @@ main {
       position: absolute;
       top: 0;
       left: 0;
-      @include flex(column, center, center);
+      @include flex(column, flex-start, center);
+      margin-top: 10em;
 
       * {
         text-transform: uppercase;
@@ -28,6 +28,13 @@ main {
         background-color: white;
       }
 
+      .description {
+        margin: 0 20%;
+        text-transform: capitalize;
+        font-weight: 400;
+        text-align: center;
+      }
+
       #upper {
         letter-spacing: 0.2em;
       }
@@ -36,9 +43,12 @@ main {
         font-size: 3em;
         padding-bottom: 0.3em;
       }
-      
     }
   }
+}
+
+main {
+  @include main();
 }
 
 main .banner img {

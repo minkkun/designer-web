@@ -22,11 +22,6 @@ h1 {
     span {
       background-color: $highlight;
     }
-    .long-dash {
-      display: block;
-      height: 0.2em;
-      width: 3em;
-    }
     .normal-text {
       background-color: inherit;
       color: black;
@@ -35,9 +30,9 @@ h1 {
 }
 
 #explore {
-  margin: 20% 5% 5%;
+  margin: 15% 5% 5%;
 }
-.section {
+@mixin section {
   * {
     color: black;
     text-transform: capitalize;
@@ -58,8 +53,6 @@ h1 {
         width: 100%;
       }
     }
-
-   
 
     .right {
       width: 50%;
@@ -107,4 +100,14 @@ h1 {
       }
     }
   }
+}
+
+.section {
+  @include section;
+}
+
+.long-dash {
+  display: block;
+  height: 0.2em;
+  width: 3em;
 }

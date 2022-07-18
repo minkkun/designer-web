@@ -1,0 +1,95 @@
+.design {
+  .container {
+    @include flex(column, center, center);
+    margin: 5%;
+    img {
+      border-radius: 1em;
+      width: 100%;
+    }
+    .image {
+      position: relative;
+      width: 100%;
+      @include flex(row, center, center);
+    }
+    .info-box {
+      position: absolute;
+      bottom: 2em;
+      width: 95%;
+      @include flex(row, space-evenly, center);
+      background-color: rgb(255, 255, 255, 0.8);
+      padding: 2% 0;
+      margin: 0 2%;
+      box-sizing: border-box;
+      border-radius: 1em;
+      * {
+        text-transform: capitalize;
+      }
+      .small-box {
+        @include flex(column, center, center);
+        .big {
+          color: black;
+        }
+        .small {
+          color: $fade-text;
+        }
+      }
+    }
+    .description {
+      margin: 2% 0;
+    }
+    .par {
+      color: $fade-text;
+      margin: 1% 0;
+      font-size: 0.9em;
+    }
+    .showcase-pics {
+      @include flex(row, center, center);
+      width: 100%;
+      gap: 2em;
+    }
+    .title {
+      color: black;
+      text-transform: uppercase;
+      font-size: 2em;
+      font-weight: $bold;
+      align-self: flex-start;
+      margin: 2% 0 0;
+    }
+  }
+  span {
+    display: block;
+    background-color: $fade-break;
+    height: 0.05em;
+    width: 100%;
+    margin: 2% 0;
+  }
+  .other {
+    @include flex(row, space-between, center);
+    width: 100%;
+    margin: 2% 0;
+    .box {
+      @include flex(row, center, center);
+      gap: 1.5em;
+      * {
+        color: black;
+        text-transform: capitalize;
+      }
+      .content {
+        flex-shrink: 0;
+        .big {
+          font-weight: $bold;
+          margin: 2% 0;
+        }
+        .small {
+          color: $fade-text;
+          font-size: 0.9em;
+        }
+      }
+    }
+    #box-2{
+        .small {
+            text-align: right;
+        }
+    }
+  }
+}

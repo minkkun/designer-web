@@ -1,0 +1,26 @@
+.menu {
+    position: absolute;
+    width: 100%;
+    @include flex(row, center, center);
+    bottom: -5rem;
+  .container {
+    @include flex(row, center, center);
+    margin: 0 10%;;
+    gap: 5em;
+    div {
+      @include flex(column, center, center);
+      color: black;
+      background-color:white;
+      text-transform: capitalize;
+      font-weight: bold;
+      padding: 2em 3em;
+      border-radius: 0.5em;
+      box-shadow: 0.2em 0.2em 0.5em  #38383852;
+      width: 12rem;
+      i {
+        color: $highlight;
+        padding-bottom: 0.3em;
+      }
+    }
+  }
+}
